@@ -2,7 +2,7 @@
 public class StringCalculator {
 	
 	public int Add(String numbers) {
-		String[] nos=numbers.split(",");
+		String[] nos=numbers.split(",|\n");
 		
 		if(isEmpty(numbers)) {
 			return 0;
