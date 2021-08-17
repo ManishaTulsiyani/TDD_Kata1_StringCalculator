@@ -23,5 +23,10 @@ public class TestCalculate {
 	public void twoNumbersCommaDelimitedReturnSum() {
 		assertEquals(sc.Add("1,2"),3);
 	}
+	
+	public void NumbersCommaDelimitedReturnSum() {
+		assertEquals(sc.Add("1,2,3"),6);
+		assertEquals(sc.Add("1,2,3,4,5"),15);
+	}
  
 }
