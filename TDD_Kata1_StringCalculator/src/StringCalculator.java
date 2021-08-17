@@ -3,7 +3,7 @@ public class StringCalculator {
 	
 	private final String delimeter=",|\n";
 	
-	public int Add(String numbers) {
+	public int Add(String numbers) throws Exception {
 		String[] nos=numbers.split(delimeter);
 		
 		if(isEmpty(numbers)) {
@@ -18,10 +18,16 @@ public class StringCalculator {
 		}
 	}
 	
-	private int getSum(String[] nos) {
+	private int getSum(String[] nos) throws Exception {
+		
+		for(String current:nos) {
+			if(stringToInt(current)<0) {
+				throw new Exception("negatives not allowed");
+			}
+		}
 		int sum=0;
 		for(String current:nos) {
-			sum+=Integer.parseInt(current);
+			sum+=stringToInt(current);
 			}
 	     return sum;
 	}
