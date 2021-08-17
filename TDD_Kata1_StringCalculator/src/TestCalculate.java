@@ -28,5 +28,9 @@ public class TestCalculate {
 		assertEquals(sc.Add("1,2,3"),6);
 		assertEquals(sc.Add("1,2,3,4,5"),15);
 	}
+	
+	public void NumbersNewLineDelimitedReturnSum() {
+		assertEquals(sc.Add("1\n2,3"),6);
+	}
  
 }
