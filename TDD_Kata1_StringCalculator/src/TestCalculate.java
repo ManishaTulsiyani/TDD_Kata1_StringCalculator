@@ -32,5 +32,10 @@ public class TestCalculate {
 	public void NumbersNewLineDelimitedReturnSum() {
 		assertEquals(sc.Add("1\n2,3"),6);
 	}
+	
+	@Test(expectedExceptions=Exception.class)
+	public void negativeValueReturnsException() {
+		sc.Add("-1");
+	}
  
 }

@@ -5,8 +5,8 @@
     <classes>
       <class name="TestCalculate">
         <methods>
-          <include name="NumbersNewLineDelimitedReturnSum"/>
           <include name="init"/>
+          <include name="negativeValueReturnsException"/>
         </methods>
       </class> <!-- TestCalculate -->
     </classes>
