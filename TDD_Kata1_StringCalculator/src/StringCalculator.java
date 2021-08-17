@@ -27,9 +27,16 @@ public class StringCalculator {
 	
 	private int getSum(String[] nos) throws Exception {
 		findNegativeValues(nos);
+		return calculateValues(nos);
+	}
+	
+	private int calculateValues(String[] nos) {
 		int sum=0;
 		for(String current:nos) {
-			sum+=stringToInt(current);
+			if(stringToInt(current)>1000) {
+				continue;
+			}
+		    sum+=stringToInt(current);
 		}
 	    return sum;
 	}
