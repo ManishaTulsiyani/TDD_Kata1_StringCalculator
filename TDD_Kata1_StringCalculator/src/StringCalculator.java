@@ -18,8 +18,8 @@ public class StringCalculator {
 	
 	private int getSum(String[] nos) {
 		int sum=0;
-		for(int current=0;current<nos.length;current++) {
-			sum+=Integer.parseInt(nos[current]);
+		for(String current:nos) {
+			sum+=Integer.parseInt(current);
 			}
 	     return sum;
 	}
