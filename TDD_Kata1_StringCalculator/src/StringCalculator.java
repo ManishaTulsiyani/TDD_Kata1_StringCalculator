@@ -11,9 +11,13 @@ public class StringCalculator {
 			return stringToInt(numbers);
 		}
 		else {
-			return Integer.parseInt(nos[0])+Integer.parseInt(nos[1]);
+			return  getSum(nos[0],nos[1]);
 			
 		}
+	}
+	
+	private int getSum(String numA,String numB) {
+		return Integer.parseInt(numA)+Integer.parseInt(numB);
 	}
 	
 	private boolean isEmpty(String numbers) {
