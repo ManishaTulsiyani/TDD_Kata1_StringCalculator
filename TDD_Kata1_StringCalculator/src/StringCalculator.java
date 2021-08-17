@@ -1,9 +1,17 @@
 
 public class StringCalculator {
 	
+	private int invoked;
 	private final String delimeter=",|\n";
 	
+	public StringCalculator () {
+	    this.invoked = 0;
+
+	}
+	
 	public int Add(String numbers) throws Exception {
+		
+		this.invoked++;
 		String[] nos=numbers.split(delimeter);
 		
 		if(isEmpty(numbers)) {
@@ -14,7 +22,6 @@ public class StringCalculator {
 		}
 		else {
 			return  getSum(nos);
-			
 		}
 	}
 	
@@ -23,14 +30,14 @@ public class StringCalculator {
 		int sum=0;
 		for(String current:nos) {
 			sum+=stringToInt(current);
-			}
-	     return sum;
+		}
+	    return sum;
 	}
 	
 	private void findNegativeValues(String[] nos) throws Exception {
 		for(String current:nos) {
 			if(stringToInt(current)<0) {
-				throw new Exception("negatives not allowed");
+				throw new Exception("negatives not allowed"+nos);
 			}
 		}
 	}
@@ -42,4 +49,8 @@ public class StringCalculator {
 	private int stringToInt(String numbers) {
 		return Integer.parseInt(numbers);
 	}
+	
+	  public int getCalledCount() {
+	        return this.invoked;
+	    }
 }

@@ -36,6 +36,11 @@ public class TestCalculate {
 	@Test(expectedExceptions=Exception.class)
 	public void negativeValueReturnsException() throws Exception {
 		sc.Add("-1");
+		sc.Add("-1,-2");
 	}
- 
+	
+	public void ignoreNumberGreaterThanThousand() throws Exception {
+		assertEquals(sc.Add("10,20,3000"),30);
+		
+	}
 }
