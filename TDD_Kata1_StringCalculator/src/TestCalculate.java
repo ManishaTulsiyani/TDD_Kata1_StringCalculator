@@ -19,5 +19,9 @@ public class TestCalculate {
 	public void singleNumberReturnsValue() {
 		assertEquals(sc.Add("1"),1);
 	}
+	
+	public void twoNumbersCommaDelimitedReturnSum() {
+		assertEquals(sc.Add("1,2"),3);
+	}
  
 }
