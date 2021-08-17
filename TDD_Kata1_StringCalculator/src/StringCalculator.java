@@ -19,17 +19,20 @@ public class StringCalculator {
 	}
 	
 	private int getSum(String[] nos) throws Exception {
-		
-		for(String current:nos) {
-			if(stringToInt(current)<0) {
-				throw new Exception("negatives not allowed");
-			}
-		}
+		findNegativeValues(nos);
 		int sum=0;
 		for(String current:nos) {
 			sum+=stringToInt(current);
 			}
 	     return sum;
+	}
+	
+	private void findNegativeValues(String[] nos) throws Exception {
+		for(String current:nos) {
+			if(stringToInt(current)<0) {
+				throw new Exception("negatives not allowed");
+			}
+		}
 	}
 	
 	private boolean isEmpty(String numbers) {

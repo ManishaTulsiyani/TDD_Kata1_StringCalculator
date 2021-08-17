@@ -57,9 +57,9 @@ function toggleAllBoxes() {
 <tr>
 <td>Tests passed/Failed/Skipped:</td><td>6/0/0</td>
 </tr><tr>
-<td>Started on:</td><td>Wed Aug 18 01:30:14 IST 2021</td>
+<td>Started on:</td><td>Wed Aug 18 01:35:20 IST 2021</td>
 </tr>
-<tr><td>Total time:</td><td>0 seconds (48 ms)</td>
+<tr><td>Total time:</td><td>0 seconds (42 ms)</td>
 </tr><tr>
 <td>Included groups:</td><td></td>
 </tr><tr>
@@ -92,7 +92,8 @@ function toggleAllBoxes() {
 <tr>
 <td title='TestCalculate.negativeValueReturnsException()'><b>negativeValueReturnsException</b><br>Test class: TestCalculate</td>
 <td><div><pre>java.lang.Exception: negatives not allowed
-	at StringCalculator.getSum(StringCalculator.java:25)
+	at StringCalculator.findNegativeValues(StringCalculator.java:33)
+	at StringCalculator.getSum(StringCalculator.java:22)
 	at StringCalculator.Add(StringCalculator.java:16)
 	at TestCalculate.negativeValueReturnsException(TestCalculate.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
@@ -125,7 +126,8 @@ function toggleAllBoxes() {
 	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:77)
 </pre></div><a href='#' onClick='toggleBox("stack-trace1864230087", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
 <div class='stack-trace' id='stack-trace1864230087'><pre>java.lang.Exception: negatives not allowed
-	at StringCalculator.getSum(StringCalculator.java:25)
+	at StringCalculator.findNegativeValues(StringCalculator.java:33)
+	at StringCalculator.getSum(StringCalculator.java:22)
 	at StringCalculator.Add(StringCalculator.java:16)
 	at TestCalculate.negativeValueReturnsException(TestCalculate.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)

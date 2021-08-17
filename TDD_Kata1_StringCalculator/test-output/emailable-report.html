@@ -9,15 +9,16 @@
 <table>
 <tr><th>Test</th><th># Passed</th><th># Skipped</th><th># Retried</th><th># Failed</th><th>Time (ms)</th><th>Included Groups</th><th>Excluded Groups</th></tr>
 <tr><th colspan="8">Default suite</th></tr>
-<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">48</td><td></td><td></td></tr>
+<tr><td><a href="#t0">Default test</a></td><td class="num">6</td><td class="num">0</td><td class="num">0</td><td class="num">0</td><td class="num">42</td><td></td><td></td></tr>
 </table>
-<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">TestCalculate</td><td><a href="#m0">NumbersCommaDelimitedReturnSum</a></td><td rowspan="1">1629230414784</td><td rowspan="1">5</td></tr><tr class="passedeven"><td><a href="#m1">NumbersNewLineDelimitedReturnSum</a></td><td rowspan="1">1629230414793</td><td rowspan="1">2</td></tr><tr class="passedeven"><td><a href="#m2">emptyStringReturnsZero</a></td><td rowspan="1">1629230414797</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m3">negativeValueReturnsException</a></td><td rowspan="1">1629230414800</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m4">singleNumberReturnsValue</a></td><td rowspan="1">1629230414804</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m5">twoNumbersCommaDelimitedReturnSum</a></td><td rowspan="1">1629230414806</td><td rowspan="1">0</td></tr></tbody>
+<table id='summary'><thead><tr><th>Class</th><th>Method</th><th>Start</th><th>Time (ms)</th></tr></thead><tbody><tr><th colspan="4">Default suite</th></tr></tbody><tbody id="t0"><tr><th colspan="4">Default test &#8212; passed</th></tr><tr class="passedeven"><td rowspan="6">TestCalculate</td><td><a href="#m0">NumbersCommaDelimitedReturnSum</a></td><td rowspan="1">1629230720212</td><td rowspan="1">5</td></tr><tr class="passedeven"><td><a href="#m1">NumbersNewLineDelimitedReturnSum</a></td><td rowspan="1">1629230720219</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m2">emptyStringReturnsZero</a></td><td rowspan="1">1629230720221</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m3">negativeValueReturnsException</a></td><td rowspan="1">1629230720223</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m4">singleNumberReturnsValue</a></td><td rowspan="1">1629230720227</td><td rowspan="1">1</td></tr><tr class="passedeven"><td><a href="#m5">twoNumbersCommaDelimitedReturnSum</a></td><td rowspan="1">1629230720229</td><td rowspan="1">1</td></tr></tbody>
 </table>
 <h2>Default test</h2><h3 id="m0">TestCalculate#NumbersCommaDelimitedReturnSum</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m1">TestCalculate#NumbersNewLineDelimitedReturnSum</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m2">TestCalculate#emptyStringReturnsZero</h3><table class="result"><tr><th class="invisible"/></tr></table><p class="totop"><a href="#summary">back to summary</a></p>
 <h3 id="m3">TestCalculate#negativeValueReturnsException</h3><table class="result"><tr><th>Expected Exception</th></tr><tr><td><div class="stacktrace">java.lang.Exception: negatives not allowed
-	at StringCalculator.getSum(StringCalculator.java:25)
+	at StringCalculator.findNegativeValues(StringCalculator.java:33)
+	at StringCalculator.getSum(StringCalculator.java:22)
 	at StringCalculator.Add(StringCalculator.java:16)
 	at TestCalculate.negativeValueReturnsException(TestCalculate.java:38)
 	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
