@@ -43,4 +43,14 @@ public class TestCalculate {
 		assertEquals(sc.Add("10,20,3000"),30);
 		
 	}
+	
+	public void changeDelimeter() throws Exception {
+        assertEquals(sc.Add("//;\n1;2") ,3);
+	}
+     
+	public void numbersMultipleDelimetersWithLengthGreaterThanOne() throws Exception{
+		assertEquals(sc.Add("//[**][%%]\n1**2%%3"),6);
+	}
+      
 }
+

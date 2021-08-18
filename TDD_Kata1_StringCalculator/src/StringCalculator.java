@@ -1,18 +1,14 @@
+import java.util.regex.Pattern;
 
 public class StringCalculator {
 	
-	private int invoked;
-	private final String delimeter=",|\n";
-	
-	public StringCalculator () {
-	    this.invoked = 0;
-
-	}
+	private int invoked=0;
+	private final String delimeter=",|\n|;";
+	String[] nos;
 	
 	public int Add(String numbers) throws Exception {
 		
-		this.invoked++;
-		String[] nos=numbers.split(delimeter);
+		invoked++;
 		
 		if(isEmpty(numbers)) {
 			return 0;
@@ -20,9 +16,29 @@ public class StringCalculator {
 		if(numbers.length()==1) {
 			return stringToInt(numbers);
 		}
+		  if(numbers.startsWith("//")){
+	            String delimiter1 = "", delimiterstr = "";
+	            int start_index = numbers.indexOf("//") + 2;
+	            int end_index = numbers.indexOf("\n");
+	            delimiter1 = numbers.substring(start_index,end_index);
+	            delimiterstr = numbers.substring(end_index + 1);
+
+	            if(delimiter1.startsWith("[") && delimiter1.endsWith("]")){
+	                delimiter1 = numbers.substring(start_index + 1,end_index - 1);
+	            }
+
+	            nos = delimiterstr.split(Pattern.quote(delimiter1));
+	            return  getSum(nos);
+		  } 
+		
+		
 		else {
-			return  getSum(nos);
+			 nos=numbers.split(delimeter);
+			 return  getSum(nos);
 		}
+		
+		
+	
 	}
 	
 	private int getSum(String[] nos) throws Exception {
@@ -30,8 +46,12 @@ public class StringCalculator {
 		return calculateValues(nos);
 	}
 	
+	
+	
 	private int calculateValues(String[] nos) {
 		int sum=0;
+		
+		
 		for(String current:nos) {
 			if(stringToInt(current)>1000) {
 				continue;
@@ -58,6 +78,6 @@ public class StringCalculator {
 	}
 	
 	  public int getCalledCount() {
-	        return this.invoked;
+	        return invoked;
 	    }
 }
